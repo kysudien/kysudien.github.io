@@ -2,6 +2,7 @@
   "name": "kysudien.github.io",
   "version": "0.0.1",
   "private": true,
+  "homepage": "https://kysudien.github.io",
   "scripts": {
     "start": "docusaurus start",
     "build": "docusaurus build",
