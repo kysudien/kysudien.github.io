@@ -9,6 +9,8 @@ const config = {
   projectName: 'kysudien.github.io',
   deploymentBranch: 'main',
   trailingSlash: false,
+  onBrokenLinks: 'warn',
+  onBrokenMarkdownLinks: 'warn',
 
   presets: [
     [
@@ -18,10 +20,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/kysudien/kysudien.github.io/edit/main/',
         },
-        blog: {
-          showReadingTime: true,
-          editUrl: 'https://github.com/kysudien/kysudien.github.io/edit/main/',
-        },
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -43,7 +42,6 @@ const config = {
           position: 'left',
           label: 'Tài liệu',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/kysudien/kysudien.github.io',
           label: 'GitHub',
@@ -58,7 +56,7 @@ const config = {
           title: 'Tài liệu',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Giới thiệu',
               to: '/docs/intro',
             },
           ],
