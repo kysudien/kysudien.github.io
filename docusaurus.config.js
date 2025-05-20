@@ -1,64 +1,81 @@
-
 // @ts-check
 const config = {
-  title: 'Kỹ Sư Điện',
-  tagline: 'Website chia sẻ kiến thức kỹ thuật điện',
+  title: 'KỸ SƯ ĐIỆN',
+  tagline: 'Chia sẻ kiến thức kỹ thuật điện',
+  favicon: 'img/favicon.ico',
   url: 'https://kysudien.github.io',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
   organizationName: 'kysudien',
   projectName: 'kysudien.github.io',
-  deploymentBranch: 'gh-pages',
+  deploymentBranch: 'main',
   trailingSlash: false,
+
   presets: [
     [
       'classic',
-      ({
+      {
         docs: {
-          path: 'docs',
-          routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
+          editUrl: 'https://github.com/kysudien/kysudien.github.io/edit/main/',
         },
-        blog: false,
+        blog: {
+          showReadingTime: true,
+          editUrl: 'https://github.com/kysudien/kysudien.github.io/edit/main/',
+        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      }),
+      },
     ],
   ],
-  themeConfig: ({
+
+  themeConfig: {
     navbar: {
-      title: 'Kỹ Sư Điện',
-      logo: { alt: 'Logo', src: 'img/logo.svg' },
+      title: 'KỸ SƯ ĐIỆN',
+      logo: {
+        alt: 'Logo',
+        src: 'img/logo.svg',
+      },
       items: [
         {
-          label: 'BOOK',
+          type: 'docSidebar',
+          sidebarId: 'tutorialSidebar',
           position: 'left',
-          items: [
-            { label: 'Sách Điện Cơ Bản', to: '/elv/intro-elv' },
-            { label: 'Sách Tự Động Hóa', to: '/elt/intro-elt' },
-          ],
+          label: 'Tài liệu',
         },
+        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          label: 'LINK',
-          position: 'left',
-          items: [
-            { label: 'Bộ Công Thương', href: 'https://moit.gov.vn' },
-            { label: 'Diễn đàn Điện', href: 'https://dien.com.vn' },
-          ],
+          href: 'https://github.com/kysudien/kysudien.github.io',
+          label: 'GitHub',
+          position: 'right',
         },
-        { type: 'docSidebar', sidebarId: 'elvSidebar', position: 'left', label: 'ELV' },
-        { type: 'docSidebar', sidebarId: 'eltSidebar', position: 'left', label: 'ELT' },
-        { href: 'https://github.com/kysudien/kysudien.github.io', label: 'GitHub', position: 'right' },
       ],
     },
     footer: {
       style: 'dark',
-      links: [],
-      copyright: `© ${new Date().getFullYear()} Kỹ Sư Điện.`,
+      links: [
+        {
+          title: 'Tài liệu',
+          items: [
+            {
+              label: 'Tutorial',
+              to: '/docs/intro',
+            },
+          ],
+        },
+        {
+          title: 'Cộng đồng',
+          items: [
+            {
+              label: 'GitHub',
+              href: 'https://github.com/kysudien/kysudien.github.io',
+            },
+          ],
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} KỸ SƯ ĐIỆN. Built with Docusaurus.`,
     },
-  }),
+  },
 };
+
 module.exports = config;
