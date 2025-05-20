@@ -1,0 +1,44 @@
+.banner {
+  background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.bannerContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.bannerContent h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.bannerContent p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.main {
+  padding: 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.container h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #1a73e8;
+}
+
+.container p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+} 
